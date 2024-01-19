@@ -76,9 +76,11 @@
         });
 
         var defaultBase = L.tileLayer.provider('Stamen.TonerLite').addTo(map);
+        var osmMap = L.tileLayer.provider('OpenStreetMap.Mapnik');
 
         var baseLayers = {
             'Stamen Toner': defaultBase,
+            'OSM': osmMap,
             'USGS TNM': L.tileLayer.provider('USGSTNM'),
             'ESRI Imagery': L.tileLayer.provider('Esri.WorldImagery'),
             'ESRI Ocean Basemap': L.tileLayer.provider('Esri.OceanBasemap'),
