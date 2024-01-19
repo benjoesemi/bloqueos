@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Leaflet Example</title>
+    <title>Mapa de Bloqueos</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,14 +71,14 @@
 
     <script>
         var map = L.map('map', {
-            center: [21.3069, -157.8583], // Honolulu, HI
-            zoom: 16
+            center: [-16, -68], // Bolivia
+            zoom: 7
         });
 
         var defaultBase = L.tileLayer.provider('Stamen.TonerLite').addTo(map);
 
         var baseLayers = {
-            'Stamen Toner': defaultBase,
+            'OSM': osmMap,
             'USGS TNM': L.tileLayer.provider('USGSTNM'),
             'ESRI Imagery': L.tileLayer.provider('Esri.WorldImagery'),
             'ESRI Ocean Basemap': L.tileLayer.provider('Esri.OceanBasemap'),
